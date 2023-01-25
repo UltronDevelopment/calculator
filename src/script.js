@@ -119,3 +119,22 @@ deleteButton.addEventListener('click', () => {
     calculator.delete();
     calculator.updateDisplay();
 });
+
+document.addEventListener(`keydown`, (e) => {
+    if(!isNaN(e.key) || e.key == `.`) { // Numbers and .
+        calculator.appendNumber(e.key);
+        calculator.updateDisplay();
+    } else if([`+`, `-`, `*`, `/`].includes(e.key)) { // Operands
+        calculator.chooseOperation(e.key);
+        calculator.updateDisplay();
+    } else if(e.key == `Enter`) {
+        calculator.compute();
+        calculator.updateDisplay();
+    } else if(e.key == `Escape`) {
+        calculator.clear();
+        calculator.updateDisplay();
+    } else if(e.key == `Backspace`) {
+        calculator.delete();
+        calculator.updateDisplay();
+    }
+});
