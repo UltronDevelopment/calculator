@@ -1,16 +1,18 @@
-*, *::before, *::after{
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&family=Fredoka+One&display=swap');
+
+*, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    font-family: 'Baloo Chettan 2', cursive;
     font-weight: normal;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #ff0000, #dbb8b8);
+    background: linear-gradient(to right, #373B44, #4286f4);
 }
 
-.calculator-grid{
+.calculator-grid {
     display: grid;
     justify-content: center;
     align-content: center;
@@ -22,7 +24,7 @@ body{
 .calculator-grid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid #fff;
     outline: none;
     background-color: rgba(255, 255, 255, .75);
 }
@@ -31,7 +33,7 @@ body{
     background-color: rgba(255, 255, 255, .9);
 }
 
-.span-two{
+.span-two {
     grid-column: span 2;
 }
 
@@ -53,10 +55,8 @@ body{
 }
 
 .output .current-operand {
-    color: rgba(255, 255, 255, .75);
+    color: #fff;
     font-size: 1.5rem;
 }
 
-@media(max-width: 768px) {
-    
-}
+@media(max-width: 768px) {}
